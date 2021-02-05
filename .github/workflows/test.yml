@@ -24,7 +24,7 @@ jobs:
       - uses: mymindstorm/setup-emsdk@v7
         with:
           version: 2.0.9
-          actions-cache-folder: emsdk-cache
+          no-cache: true
       - name: Build
         run: npm run compile
       - name: Test
