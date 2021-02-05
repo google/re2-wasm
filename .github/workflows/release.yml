@@ -1,0 +1,23 @@
+on:
+  release:
+    types: [published]
+name: release
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          registry-url: 'https://wombat-dressing-room.appspot.com'
+      - uses: mymindstorm/setup-emsdk@v7
+        with:
+          version: 2.0.9
+          no-cache: true
+      - run: npm install
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
