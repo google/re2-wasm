@@ -1,6 +1,9 @@
 name: Tests
 
 on:
+  push:
+    branches:
+      - 'master'
   pull_request:
     branches:
       - 'master'
@@ -26,5 +29,3 @@ jobs:
         run: npm run compile
       - name: Test
         run: npm test
-      
-
