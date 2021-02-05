@@ -21,6 +21,9 @@
     "heya-unit": "^0.3.0",
     "typescript": "~4.1.3"
   },
+  "engines": {
+    "node": ">=10"
+  },
   "files": [
     "src/*.ts",
     "wasm/re2.d.ts",
