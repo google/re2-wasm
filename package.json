@@ -1,7 +1,15 @@
 {
   "name": "re2-wasm",
   "version": "1.0.0",
+  "keywords": [
+    "regexp",
+    "re2",
+    "wasm"
+  ],
   "description": "Google's RE2 library distributed as a WASM module",
+  "homepage": "https://github.com/google/re2-wasm",
+  "bugs": "https://github.com/google/re2-wasm/issues",
+  "repository": "https://github.com/google/re2-wasm",
   "main": "build/src/re2.js",
   "scripts": {
     "test": "node ./third_party/node-re2/tests/tests.js",
@@ -28,5 +36,6 @@
     "src/*.ts",
     "wasm/re2.d.ts",
     "build/**/*.{d.ts,js,js.map,wasm}"
-  ]
+  ],
+  "types": "./build/src/re2.d.ts"
 }
