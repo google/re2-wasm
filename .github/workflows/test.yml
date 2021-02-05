@@ -12,7 +12,7 @@ jobs:
   tests:
     strategy:
       matrix:
-        node: [8, 10, 12, 14]
+        node: [10, 12, 14]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,7 +24,9 @@ jobs:
       - uses: mymindstorm/setup-emsdk@v7
         with:
           version: 2.0.9
-          actions-cache-folder: emsdk-cache
+          no-cache: true
+      - name: Install
+        run: npm install
       - name: Build
         run: npm run compile
       - name: Test
