@@ -1,0 +1,30 @@
+name: Tests
+
+on:
+  pull_request:
+    branches:
+      - 'master'
+
+jobs:
+  tests:
+    strategy:
+      matrix:
+        node: [8, 10, 12, 14]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{matrix.node}}
+      - uses: mymindstorm/setup-emsdk@v7
+        with:
+          version: 2.0.9
+          actions-cache-folder: emsdk-cache
+      - name: Build
+        run: npm run compile
+      - name: Test
+        run: npm test
+      
+
