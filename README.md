@@ -3,6 +3,8 @@
 [npm-img]: https://img.shields.io/npm/v/re2-wasm.svg
 [npm-url]: https://npmjs.org/package/re2-wasm
 
+**This is not an officially supported Google product.**
+
 This README is modified from the node-re2 README, licensed under The "New" BSD License
 
 This project provides bindings for [RE2](https://github.com/google/re2):
