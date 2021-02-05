@@ -25,6 +25,8 @@ jobs:
         with:
           version: 2.0.9
           no-cache: true
+      - name: Install
+        run: npm install
       - name: Build
         run: npm run compile
       - name: Test
