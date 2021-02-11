@@ -21,7 +21,7 @@ but it lacks two features: backreferences and lookahead assertions. See below fo
 `RE2` is extended to provide `String`-based regular expression methods as well. To help to convert
 `RegExp` objects to `RE2` its constructor can take `RegExp` directly honoring all properties.
 
-## Why use node-re2?
+## Why use re2-wasm?
 
 The built-in Node.js regular expression engine can run in exponential time with a special combination:
  - A vulnerable regular expression
@@ -34,8 +34,8 @@ To tell if your regular expressions are vulnerable, you might try the one of the
 
 However, neither project is perfect.
 
-node-re2 can protect your Node.js application from ReDoS.
-node-re2 makes vulnerable regular expression patterns safe by evaluating them in `RE2` instead of the built-in Node.js regex engine.
+re2-wasm can protect your Node.js application from ReDoS.
+re2-wasm makes vulnerable regular expression patterns safe by evaluating them in `RE2` instead of the built-in Node.js regex engine.
 
 ## Standard features
 
