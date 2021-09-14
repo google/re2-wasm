@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.2](https://www.github.com/google/re2-wasm/compare/v1.0.1...v1.0.2) (2021-09-14)
+
+
+### Bug Fixes
+
+* Don't generate unhandled exception and rejection handlers ([47df5f5](https://www.github.com/google/re2-wasm/commit/47df5f581089c4f9210188f54374b2285446936b))
+
 ### [1.0.1](https://www.github.com/google/re2-wasm/compare/v1.0.0...v1.0.1) (2021-02-11)
 
 
