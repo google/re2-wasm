@@ -16,5 +16,6 @@ require("./test_invalid");
 require("./test_symbols");
 require("./test_prototype");
 require("./test_groups");
+require("./test_matchAll");
 
 unit.run();
