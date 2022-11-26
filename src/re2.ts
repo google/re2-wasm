@@ -390,7 +390,9 @@ export class RE2 {
     return this[Symbol.match](input);
   }
 
-  *[Symbol.matchAll](input: string): Generator<RE2MatchArray> {
+  *[(Symbol as SymbolConstructor & {matchAll?: symbol}).matchAll || Symbol()](
+    input: string
+  ): Generator<RE2MatchArray> {
     const copy = new RE2(this);
     copy.lastIndex = this.lastIndex;
 
