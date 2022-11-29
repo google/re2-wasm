@@ -390,6 +390,21 @@ export class RE2 {
     return this[Symbol.match](input);
   }
 
+  *[(Symbol as SymbolConstructor & {matchAll?: symbol}).matchAll || Symbol()](
+    input: string
+  ): Generator<RE2MatchArray> {
+    const copy = new RE2(this);
+    copy.lastIndex = this.lastIndex;
+
+    for (;;) {
+      const match = copy.exec(input);
+      if (match === null) {
+        break;
+      }
+      yield match;
+    }
+  }
+
   /**
    * Outputs the replacement for the matched part of the string
    * @param input
