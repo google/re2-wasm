@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/google/re2-wasm/compare/v1.0.2...v1.1.0) (2022-11-30)
+
+
+### Features
+
+* Add support for String.prototype.matchAll() ([f8dfe27](https://github.com/google/re2-wasm/commit/f8dfe27716747914585482f6b70f353b2f2507ce))
+
 ### [1.0.2](https://www.github.com/google/re2-wasm/compare/v1.0.1...v1.0.2) (2021-09-14)
 
 
